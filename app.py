@@ -29,5 +29,6 @@ if st.button("Corriger"):
                     config=types.GenerateContentConfig(system_instruction=system_prompt)
             )
                 st.markdown(response.text)
-            except Exception:
-                st.error("Le service de correction est en surcharge. Veuillez réessayer plus tard.")
+            except Exception as e:
+                st.error("Une erreur est survenue lors de la correction. Veuillez réessayer plus tard.")
+                st.caption(f"Détails de l'erreur : {e}")
