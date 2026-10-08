@@ -3,7 +3,7 @@ from google import genai
 from google.genai import types
 from groq import Groq
 
-st.set_page_config(page_title="Correcteur Club des Miniers", page_icon="icone.png")
+st.set_page_config(page_title="Correcteur CIM-ESUP", page_icon="icone.png")
 
 client = genai.Client()
 client_groq = Groq()
@@ -18,7 +18,7 @@ Si le texte n'a aucune faute, dis le clairement et félicite l'étudiant."""
 
 st.image("logo.png", width=300)
 st.title("Correcteur de Daily Report en anglais")
-st.write("Club des Miniers, section anglaise")
+st.write("Club de l'Ingénierie Minière (CIM-ESUP), section anglaise")
 
 rapport = st.text_area("Veuillez saisir votre Daily Report ici (en anglais) :", height=300)
 
